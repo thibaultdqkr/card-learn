@@ -3,6 +3,8 @@ $(document).ready(function(){
 	//Création d'une carte
 	$("#addCard").click(function(){
 			addCard();
+			$('#cards').append("<div class='card-block'>Test</div>")
+			.append("<p>Test</p>");
 		});
 
 	//Affichage des cartes

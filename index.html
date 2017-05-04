@@ -1,19 +1,40 @@
 <!DOCTYPE html>
 <head>
+	<title>Learn with cards</title>
+	<link rel="icon" href="img/favicon.png" />
 	<meta charset="UTF-8">
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.2/css/bootstrap.min.css" integrity="sha384-y3tfxAZXuh4HwSYylfB+J125MxIs6mR5FOHamPBG064zB+AFeWH94NdvaCBm8qnd" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- Latest compiled and minified JavaScript -->
 	<link rel="stylesheet" type="text/css" href="style.css">
 	  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
 </head>
 <body>
-	<h1>
-		<button id="addCard">Créer une carte</button>
-		<button id="listCards">Voir les carte</button>
-		
-	</h1>
+
+	<section class="container">
+		<div class="row">
+			<h1 class="col-sm-12">Learn with cards</h1>
+		</div>
+		<div class="row">
+			<div class="actions col-sm-12">
+				<button type="button" id="addCard" class="btn btn-primary" >Créer une carte</button>
+				<button type="button" id="listCards" class="btn btn-default">Voir les carte</button>
+			</div>
+		</div>
+		<div class="row">
+			<div id="cards" class="col-sm-12 card">
+				<div class="card-block">
+					<h4 class="card-title">Card title</h4>
+					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+				</div>
+			</div>
+
+		</div>
+		</div>
+	</section>
+
+
 
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script type="text/javascript" src="main.js"></script>
