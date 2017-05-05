@@ -11,33 +11,50 @@
 
 </head>
 <body>
-
+	<header class="container">
+			<div class="row">
+				<h1 class="col-sm-6">Learn with cards</h1>
+				<div class="col-sm-6 text-right align-middle">
+					<button type="button" id="addCardButton" class="btn btn-primary" >Créer une carte</button>
+				</div>
+			</div>
+	</header>
 	<section class="container">
-		<div class="row">
-			<h1 class="col-sm-12">Learn with cards</h1>
-		</div>
-		<div class="row" id="actions">
-			<div class="col-sm-12">
-				<button type="button" id="addCard" class="btn btn-primary" >Créer une carte</button>
-				<button type="button" id="listCards" class="btn btn-default">Voir les carte</button>
-			</div>
-		</div>
-		<div class="row" id="cards">
-			<div class="col-sm-12 card">
-				<div class="card-block">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+		<div class="row" id="cards"><!--Fill with new Card method--></div>
+
+		<div class="modal fade">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+							<span aria-hidden="true">&times;</span>
+						</button>
+						<h3 class="modal-title">Nouvelle carte</h3>
+					</div>
+					<form>
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="card-question">Question</label>
+								<input id="card-question" type="text" class="form-control"/>
+								<label for="card-answer">Réponse</label>
+								<input id="card-answer" type="text" class="form-control"/>
+							</div>
+							<div class="modal-footer">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+								<input type="button" id="createCard" class="btn btn-primary" value="Ajouter"/>
+							</div>
+					</form>
 				</div>
 			</div>
-			<div class="col-sm-12 card">
-				<div class="card-block col-sm-12">
-					<h4 class="card-title">Card title</h4>
-					<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-				</div>
-			</div>
-		</div>
 		</div>
 	</section>
+	<footer class="container">
+		<div class="row" id="cards">
+			<p class=" col-sm-12 text-center">Made by ThbltDqkr. Learning by doing.</p>
+		</div>
+	</section>
+
+
 
 
 

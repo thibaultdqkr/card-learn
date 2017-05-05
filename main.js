@@ -1,55 +1,42 @@
 $(document).ready(function(){
 
+	$('#addCardButton').click(function(){
+		$('.modal').modal('show');
+	});
 	//Création d'une carte
-	$("#addCard").click(function(){
-			newCard = new Card();
-			$('#cards').append("<div class='col-sm-12 card'></div>")
-				.after("<div class='card-block'>"+ newCard.question+ "</div>");
-		});
+	$("#createCard").click(function(){
+
+		//Getting user inputs to generate card data
+		question = $('#card-question').val();
+		answer = $('#card-answer').val();
+
+		//Setting cards table as an empty object
+		var cards = [];
+
+		//Call method with new card data
+		newCard = new Card(question,answer);
+
+		//Create DOM elements to display new card
+		$('#cards').append("<div class='col-sm-12 card'></div>");
+		$('.card:last').append("<div class='card-block col-sm-12'></div>");
+		$('.card-block:last').append("<h4>"+ newCard.question+ "</h4>");
+		$('.card-block:last').append("<p>"+ newCard.answer+ "</p>" );
+
+		$('.modal').modal('hide');
+
+	});
+
+
 
 	//Affichage des cartes
 	$("#listCards").click(function(){
-			listCards();
+		listCards();
 		});
 
-});
-//Initialisation de la table des cartes
-cards = [];
-
-//Fonction de création d'une carte
-function Card(){
-	this.question = prompt("votre question ? ");
-	this.answer = prompt("Votre réponse : ");
-	this.id = cards.length + 1;
-}
-
-//Fonction d'affichage des cartes
-var listCards = function(){
-	for (i=0; i <= cards.length; i++){
-		console.log(cards[i]);
-	}
-}
-
-// for (i=0; i <= cards.length; i++){
-// 	console.log ("Carte " + i+1);
-// 	console.log("La question est : " + cards[i].question+ ". Et la réponse est : " +cards[i].answer);
-// }
-
-
-	// function Card(question,answer) {
-	// 	this.question = question;
-	// 	this.answer = answer;
-	// }
-
-	//
-	// cards[0] = new Card (prompt("Question :"),prompt("Answer :"));
-	// cards[1] = new Card (prompt("Question :"),prompt("Answer :"));
-
-
-
-
-
-	/*$('#addCard').click(function(){
-			console.log("New card creation");
-			cards[cards.length + 1] = new Card;
-	})*/
+	//Fonction de création d'une carte
+	function Card(question,answer){
+		this.question = question; //$('#card-question').val();
+		this.answer = answer; //$('#card-question').val();
+		this.id = cards.length + 1;
+		}
+	});
