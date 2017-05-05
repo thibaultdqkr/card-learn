@@ -2,9 +2,8 @@ $(document).ready(function(){
 
 	//Création d'une carte
 	$("#addCard").click(function(){
-			addCard();
-			$('#cards').append("<div class='card-block'>Test</div>")
-			.append("<p>Test</p>");
+			newCard = new Card();
+			$('#cards').append("<div class='card-block'>"+ newCard.question+ "</div>");
 		});
 
 	//Affichage des cartes
@@ -17,13 +16,10 @@ $(document).ready(function(){
 cards = [];
 
 //Fonction de création d'une carte
-var addCard = function(question,answer){
-	var cardsLength = cards.length;
-	cards[cards.length]={
-		id: cards.length + 1,
-		question: prompt("votre question ? "),
-		answer: prompt("Votre réponse : ")
-	}
+function Card(){
+	this.question = prompt("votre question ? ");
+	this.answer = prompt("Votre réponse : ");
+	this.id = cards.length + 1;
 }
 
 //Fonction d'affichage des cartes
