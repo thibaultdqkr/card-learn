@@ -3,7 +3,8 @@ $(document).ready(function(){
 	//Création d'une carte
 	$("#addCard").click(function(){
 			newCard = new Card();
-			$('#cards').append("<div class='card-block'>"+ newCard.question+ "</div>");
+			$('#cards').append("<div class='col-sm-12 card'></div>")
+				.after("<div class='card-block'>"+ newCard.question+ "</div>");
 		});
 
 	//Affichage des cartes
